@@ -32,6 +32,15 @@ app.get("/list_posts", async (req, res) => {
   }
 });
 
+app.get("/hello", async (req, res) => {
+  try {
+    
+    res.send("hello");
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
 // show one post
 app.get("/show_post/:post_id", async (req, res) => {
   try {
